@@ -16,7 +16,8 @@ namespace Docker.DotNet
 
         private static Uri LocalDockerUri()
         {
-            var isWindows = RuntimeInformation.IsOSPlatform(OSPlatform.Windows);
+            //var isWindows = RuntimeInformation.IsOSPlatform(OSPlatform.Windows);
+            var isWindows = false;
             return isWindows ? new Uri("npipe://./pipe/docker_engine") : new Uri("unix:/var/run/docker.sock");
         }
 
