@@ -31,13 +31,13 @@ namespace Docker.DotNet.BasicAuth
             return Convert.ToBase64String(Encoding.UTF8.GetBytes(authInfo));
         }
 
-        protected override void Dispose(bool disposing)
+        /*protected override void Dispose(bool disposing)
         {
             if (disposing)
             {
                 _username.Dispose();
                 _password.Dispose();
             }
-        }
+        }*/
     }
 }
